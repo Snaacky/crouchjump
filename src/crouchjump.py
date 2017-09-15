@@ -10,7 +10,8 @@ def main():
         if "PLAYERUNKNOWN'S BATTLEGROUNDS" in GetWindowText(GetForegroundWindow()):
             if keyboard.is_pressed("shift+space"):
                 keyboard.press_and_release("space")
-                keyboard.press_and_release("ctrl")
+                keyboard.press_and_release("c")
+                keyboard.press_and_release("c")
 
 
 if __name__ == '__main__':
