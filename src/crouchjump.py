@@ -1,5 +1,6 @@
 import keyboard
 import sys
+import time
 from win32gui import GetWindowText, GetForegroundWindow
 
 
@@ -12,6 +13,7 @@ def main():
                 keyboard.press_and_release("space")
                 keyboard.press_and_release("c")
                 keyboard.press_and_release("c")
+        time.sleep(0.1)
 
 
 if __name__ == '__main__':
