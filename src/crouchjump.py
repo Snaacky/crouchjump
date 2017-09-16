@@ -15,6 +15,8 @@ def main():
                     keyboard.press_and_release("c")
                     keyboard.press_and_release("c")
             time.sleep(0.1)
+        except KeyboardInterrupt:
+            raise
         except:
             pass
 
