@@ -99,3 +99,9 @@ ENV/
 
 # mypy
 .mypy_cache/
+
+# crouchjump
+compile.bat
+img/
+utils/
+dist/
