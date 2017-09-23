@@ -1,5 +1,5 @@
 # Crouchjump
-A crouch-jump hotkey script for PUBG without having to rely on in-game UI bugs and third-party mouse/keyboard drivers.
+A crouch-jump hotkey script for PUBG without having to rely on in-game bugs and third-party mouse/keyboard drivers.
 
 ## Download
 [You may click here to go to the download page.](https://github.com/Snaacky/Crouchjump/releases/tag/v1.0)
