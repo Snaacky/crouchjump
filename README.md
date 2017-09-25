@@ -8,7 +8,7 @@ A crouch-jump hotkey script for PUBG without having to rely on in-game bugs, aut
 In the current state, Crouchjump requires you to have space bound to jump and C bound to crouch. If there is demand for it, I will add configuration options to the compiled version so you can set your binds freely.
 
 ## Warning
-Crouchjump comes as is with no guarentees regarding potential bans. [I've written rather extensively about this topic here](https://github.com/Snaacky/Crouchjump/issues/1). [poopieQueen](https://twitter.com/poopiequeen), community lead for PUBG has stated [in her AMA](https://www.reddit.com/r/PUBATTLEGROUNDS/comments/72396a/iama_poopiequeen_ama/dnfg087/) that "at the moment" Bluehole are not banning users for macros so this should be safe to use. If there becomes a time in which it is unsafe, I will update this statement.
+Crouchjump comes as is with no guarentees regarding potential bans. [I've written rather extensively about this topic here](https://github.com/Snaacky/Crouchjump/issues/1). [poopieQueen](https://twitter.com/poopiequeen), community lead for PUBG, has stated [in her AMA](https://www.reddit.com/r/PUBATTLEGROUNDS/comments/72396a/iama_poopiequeen_ama/dnfg087/) that "at the moment" Bluehole are not banning users for macros so this should be safe to use. If there becomes a time in which it is unsafe, I will update this statement.
 
 ## Requirements (source code only)
 * [Python 3.x](https://www.python.org/)
