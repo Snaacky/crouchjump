@@ -103,3 +103,5 @@ ENV/
 # crouchjump
 compile.bat
 img/
+utils/
+dist/
