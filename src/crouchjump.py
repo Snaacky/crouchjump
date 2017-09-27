@@ -1,23 +1,35 @@
+import configparser
 import keyboard
 import os
 from win32gui import GetWindowText, GetForegroundWindow
 
+config = configparser.RawConfigParser()
+
 
 def main():
-    if not does_config_exists():
+    '''
+    Checks for config, if non-existent, creates one. If config exists,
+    it will read the options from it and pass them to start_loop.
+    '''
+    if not os.path.exists(os.getcwd() + "\config.ini"):
         print("Config not found. Creating one.")
         create_config()
+    else:
+        config.read('config.ini')
 
-    result = read_config()
-    jump = result[0]
-    crouch = result[1]
-    toggle = result[2]
+    jump = config.get("crouchjump", "jump")
+    crouch = config.get("crouchjump", "crouch")
+    toggle = config.get("crouchjump", "toggle")
 
     start_loop(jump, crouch, toggle)
 
 
 def start_loop(jump, crouch, toggle):
-    print("Crouchjump (v1.0.1) loaded. Use {} to crouch jump.".format(toggle))
+    '''
+    An infinite loop that takes the configuration options, waits for a toggle,
+    and if alt-tabbed into PUBG, will send the crouch jump keypresses.
+    '''
+    print("Crouchjump (v1.0.2) loaded. Use {} to crouch jump.".format(toggle))
 
     while True:
         if "PLAYERUNKNOWN'S BATTLEGROUNDS" in GetWindowText(GetForegroundWindow()):
@@ -28,27 +40,17 @@ def start_loop(jump, crouch, toggle):
             keyboard.press_and_release(crouch)
 
 
-def does_config_exists():
-    if os.path.exists(os.getcwd() + "\config.ini"):
-        return True
-
-
 def create_config():
-    with open("config.ini", "a+") as file:
-        file.write("jump=space\n")
-        file.write("crouch=c\n")
-        file.write("toggle=shift+space")
+    '''
+    Creates default configuration.
+    '''
+    config.add_section('crouchjump')
+    config.set('crouchjump', 'jump', 'space')
+    config.set('crouchjump', 'crouch', 'c')
+    config.set('crouchjump', 'toggle', 'shift+space')
 
-
-def read_config():
-    with open("config.ini", "r") as file:
-        lines = file.readlines()
-        jump = lines[0].replace("jump=", "")
-        jump = jump.replace("\n", "")
-        crouch = lines[1].replace("crouch=", "")
-        crouch = crouch.replace("\n", "")
-        toggle = lines[2].replace("toggle=", "")
-        return jump, crouch, toggle
+    with open("config.ini", "w") as config_file:
+        config.write(config_file)
 
 
 if __name__ == '__main__':
