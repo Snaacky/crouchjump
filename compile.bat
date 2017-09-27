@@ -1,3 +1,4 @@
+REM This compile script sucks really hard. It assumes you have 64-bit Python 3.5 with PyInstaller already installed.
 @RD /S /Q "dist"
 cd %~p0
 python %localappdata%\Programs\Python\Python35\Scripts\pyinstaller-script.py src/crouchjump.py --onefile --clean --icon=img/logo.ico --key=zfDzwOwIUvnQemip
