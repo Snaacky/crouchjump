@@ -1,6 +1,9 @@
 # Crouchjump
 A crouch-jump hotkey script for PUBG without having to rely on in-game bugs, autohotkey, and third-party mouse/keyboard drivers.
 
+## Update
+As of December 21st, 2017, this project was deprecated when PUBG was released from early access and added vaulting. Thank you for the thousands of downloads!
+
 ## Download
 [You may click here to go to the download page.](https://github.com/Snaacky/Crouchjump/releases/)
 
